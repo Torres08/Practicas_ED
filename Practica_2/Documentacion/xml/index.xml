@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.3" xml:lang="es">
+  <compound refid="classImagen" kind="class"><name>Imagen</name>
+    <member refid="classImagen_1a74bf3487e42bb65862e994883fa05b33" kind="variable"><name>datos</name></member>
+    <member refid="classImagen_1a7f15719f14cd934dfcbd68c287bbbe8b" kind="variable"><name>filas</name></member>
+    <member refid="classImagen_1af63de0598ca965ab3a30b54ee7e2cedc" kind="variable"><name>columnas</name></member>
+    <member refid="classImagen_1ab2e649aa7a105155c7bfdb846abf0528" kind="function"><name>Imagen</name></member>
+    <member refid="classImagen_1a443a2f2b1982ea112b4f202ae9eb191b" kind="function"><name>Imagen</name></member>
+    <member refid="classImagen_1a33f5f31d610526dbe66d04de0a827f91" kind="function"><name>Imagen</name></member>
+    <member refid="classImagen_1a03dd93c9cf920a9dc0b72f8bd34f2e8a" kind="function"><name>~Imagen</name></member>
+    <member refid="classImagen_1aa8bdc0191ef1b952a6405273edf3f3c8" kind="function"><name>operator=</name></member>
+    <member refid="classImagen_1aad51d7a6f24e935964cc588f9bc4ff5c" kind="function"><name>NumFilas</name></member>
+    <member refid="classImagen_1adf76fe20e581aca77cc3e76cbca48fc9" kind="function"><name>NumColumnas</name></member>
+    <member refid="classImagen_1af5bb1e291334ed1fe9f6da3e4aaa531f" kind="function"><name>LeerImagenPGM</name></member>
+    <member refid="classImagen_1a0858acd4183c994c8604bfaee5c9b070" kind="function"><name>EscribirImagenPGM</name></member>
+    <member refid="classImagen_1a290f1372b6898f64616537f62626055d" kind="function"><name>GetValor</name></member>
+    <member refid="classImagen_1a74d67e7a623f3ae59c17f4c2a28c3b5a" kind="function"><name>SetValor</name></member>
+    <member refid="classImagen_1ae3324a79f93ce312b9399657971fe608" kind="function"><name>InsertarFila</name></member>
+    <member refid="classImagen_1a09d18aa462dd4dcdf02bde211d19e62c" kind="function"><name>InsertarColumna</name></member>
+    <member refid="classImagen_1ab0cafb3982c3e462e19dbe5d00dec613" kind="function"><name>Ecualizar</name></member>
+    <member refid="classImagen_1addac062b777cbdeb3966e2f7f1d9c4be" kind="function"><name>EcualizarFila</name></member>
+    <member refid="classImagen_1af90fd57d87b22381badce1bcc6f232b6" kind="function"><name>EcualizarColumna</name></member>
+    <member refid="classImagen_1ae1516fcbe43bfc322aaf94514d9adde3" kind="function"><name>ExtraerSubimagen</name></member>
+    <member refid="classImagen_1a327034af4e2e896dfc35dd540bf8e045" kind="function"><name>HacerZoom</name></member>
+    <member refid="classImagen_1afbae8090d8cd667b592b63f7fe28c28e" kind="function"><name>Interpolar</name></member>
+    <member refid="classImagen_1af964c504603e4d347d1d31f5d7e2a93d" kind="function"><name>AumentarContraste</name></member>
+    <member refid="classImagen_1a1b20b4eaa732af8c74e805480226dd1e" kind="function"><name>ReservarMemoria</name></member>
+    <member refid="classImagen_1a8bb0feb19121db32f251d9408d2752d3" kind="function"><name>LiberarMemoria</name></member>
+    <member refid="classImagen_1aca61daf97e30b7e6a3d08527b5dd79c1" kind="function"><name>CopiarDatos</name></member>
+    <member refid="classImagen_1a9eb8fc244254ef82a6463c9d0740f92f" kind="function"><name>LeerTipoImagen</name></member>
+    <member refid="classImagen_1a63a7ae878bf5b08fe5b0254e5d22955e" kind="function"><name>LeerTipoImagen</name></member>
+    <member refid="classImagen_1a4bbb62e5f2690486fc1e7880c615d8c1" kind="function"><name>SaltarSeparadores</name></member>
+    <member refid="classImagen_1a364fe3e22864e0d0eebb9cc0e39022ee" kind="function"><name>LeerCabecera</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="contraste_8cpp" kind="file"><name>contraste.cpp</name>
+    <member refid="contraste_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="imagen_8cpp" kind="file"><name>imagen.cpp</name>
+  </compound>
+  <compound refid="imagen_8h" kind="file"><name>imagen.h</name>
+    <member refid="imagen_8h_1a8914f6544a484741b05c092d9e7522ed" kind="enum"><name>TipoImagen</name></member>
+    <member refid="imagen_8h_1a8914f6544a484741b05c092d9e7522eda23c8d70e6eadf2d0d0ee1fd3bb293384" kind="enumvalue"><name>IMG_DESCONOCIDO</name></member>
+    <member refid="imagen_8h_1a8914f6544a484741b05c092d9e7522eda8fbef75c1a0002dd6099c6cc1a43e441" kind="enumvalue"><name>IMG_PGM</name></member>
+    <member refid="imagen_8h_1a0c8186d9b9b7880309c27230bbb5e69d" kind="typedef"><name>byte</name></member>
+  </compound>
+  <compound refid="subimagen_8cpp" kind="file"><name>subimagen.cpp</name>
+    <member refid="subimagen_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="zoom_8cpp" kind="file"><name>zoom.cpp</name>
+    <member refid="zoom_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+</doxygenindex>

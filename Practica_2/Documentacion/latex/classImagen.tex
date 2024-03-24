@@ -1,0 +1,456 @@
+\doxysection{Referencia de la Clase Imagen}
+\label{classImagen}\index{Imagen@{Imagen}}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Imagen} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto de la clase imagen. \end{DoxyCompactList}\item 
+\textbf{ Imagen} (int fils, int cols)
+\begin{DoxyCompactList}\small\item\em Constructor de imagen con filas filas y columnas columnas. \end{DoxyCompactList}\item 
+\textbf{ Imagen} (const \textbf{ Imagen} \&otra)
+\begin{DoxyCompactList}\small\item\em Constructor de copia de la clase imagen. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Imagen} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \doxyref{Imagen}{p.}{classImagen}. \end{DoxyCompactList}\item 
+\textbf{ Imagen} \& \textbf{ operator=} (const \textbf{ Imagen} \&otra)
+\begin{DoxyCompactList}\small\item\em Operador = de la clase imagen, que copia los datos de otra. \end{DoxyCompactList}\item 
+int \textbf{ Num\+Filas} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el número de filas de la imagen. \end{DoxyCompactList}\item 
+int \textbf{ Num\+Columnas} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el número de columnas de la imagen. \end{DoxyCompactList}\item 
+void \textbf{ Leer\+Imagen\+PGM} (const string nombre)
+\begin{DoxyCompactList}\small\item\em Lee una imagen PGM. \end{DoxyCompactList}\item 
+void \textbf{ Escribir\+Imagen\+PGM} (const string nombre)
+\begin{DoxyCompactList}\small\item\em Guarda una imagen en formato PGM. \end{DoxyCompactList}\item 
+byte \textbf{ Get\+Valor} (int fil, int col) const
+\begin{DoxyCompactList}\small\item\em Consulta el valor de un píxel de la imagen. \end{DoxyCompactList}\item 
+void \textbf{ Set\+Valor} (int fil, int col, byte valor)
+\begin{DoxyCompactList}\small\item\em Modifica el valor de un píxel de la imagen. \end{DoxyCompactList}\item 
+void \textbf{ Insertar\+Fila} (int pos)
+\begin{DoxyCompactList}\small\item\em Inserta una fila de píxeles vacíos en la posición indicada. \end{DoxyCompactList}\item 
+void \textbf{ Insertar\+Columna} (int pos)
+\begin{DoxyCompactList}\small\item\em Inserta una columna de píxeles vacíos en la posición indicada. \end{DoxyCompactList}\item 
+void \textbf{ Ecualizar} (int valor)
+\begin{DoxyCompactList}\small\item\em Llena la imagen de píxeles de la luminosidad indicada. \end{DoxyCompactList}\item 
+void \textbf{ Ecualizar\+Fila} (int fil, int valor)
+\begin{DoxyCompactList}\small\item\em Llena una fila de píxeles con el valor indicado. \end{DoxyCompactList}\item 
+void \textbf{ Ecualizar\+Columna} (int col, int valor)
+\begin{DoxyCompactList}\small\item\em Llena una columna de píxeles con el valor indicado. \end{DoxyCompactList}\item 
+void \textbf{ Extraer\+Subimagen} (const \textbf{ Imagen} \&otra, const int fil, const int col, const int fils\+\_\+sub, const int cols\+\_\+sub)
+\begin{DoxyCompactList}\small\item\em Extrae una subimagen PGM de otra imagen PGM. \end{DoxyCompactList}\item 
+void \textbf{ Hacer\+Zoom} (const \textbf{ Imagen} \&otra, const int fil, const int col, const int fils\+\_\+sub, const int cols\+\_\+sub)
+\begin{DoxyCompactList}\small\item\em Hace zoom a una imagen, esto es\+: \end{DoxyCompactList}\item 
+\mbox{\label{classImagen_afbae8090d8cd667b592b63f7fe28c28e}} 
+void {\bfseries Interpolar} ()
+\begin{DoxyCompactList}\small\item\em Aplica a la subimagen una interpolacion consistente en añadir filas (y columnas) en las que el valor de cada píxel será una media de los valores de los píxeles que tenga arriba y abajo (a izquierda y derecha, respectivamente) \end{DoxyCompactList}\item 
+void \textbf{ Aumentar\+Contraste} (const int e1, const int e2, const int s1, const int s2)
+\begin{DoxyCompactList}\small\item\em Aumenta el contraste de una imagen mediante un estiramiento de su histograma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\label{classImagen_ab2e649aa7a105155c7bfdb846abf0528}} 
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\doxysubsubsection{Imagen()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Imagen\+::\+Imagen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto de la clase imagen. 
+
+\begin{DoxyPostcond}{Postcondición}
+\doxyref{Imagen}{p.}{classImagen} vacía, sin filas ni columnas 
+\end{DoxyPostcond}
+\mbox{\label{classImagen_a443a2f2b1982ea112b4f202ae9eb191b}} 
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\doxysubsubsection{Imagen()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Imagen\+::\+Imagen (\begin{DoxyParamCaption}\item[{int}]{fils,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+
+
+Constructor de imagen con filas filas y columnas columnas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fils} & Número de filas de la imagen \\
+\hline
+{\em cols} & Número de columnas de la imagen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+filas $>$ 0 \&\& columnas $>$ 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+\doxyref{Imagen}{p.}{classImagen} con valores basura, sin inicializar 
+\end{DoxyPostcond}
+\mbox{\label{classImagen_a33f5f31d610526dbe66d04de0a827f91}} 
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\index{Imagen@{Imagen}!Imagen@{Imagen}}
+\doxysubsubsection{Imagen()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Imagen\+::\+Imagen (\begin{DoxyParamCaption}\item[{const \textbf{ Imagen} \&}]{otra }\end{DoxyParamCaption})}
+
+
+
+Constructor de copia de la clase imagen. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em otra} & \doxyref{Imagen}{p.}{classImagen} que se quiere copiar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondición}
+La imagen será identica a otra 
+\end{DoxyPostcond}
+\mbox{\label{classImagen_a03dd93c9cf920a9dc0b72f8bd34f2e8a}} 
+\index{Imagen@{Imagen}!````~Imagen@{$\sim$Imagen}}
+\index{````~Imagen@{$\sim$Imagen}!Imagen@{Imagen}}
+\doxysubsubsection{$\sim$Imagen()}
+{\footnotesize\ttfamily Imagen\+::$\sim$\+Imagen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor de la clase \doxyref{Imagen}{p.}{classImagen}. 
+
+\begin{DoxyPostcond}{Postcondición}
+\doxyref{Imagen}{p.}{classImagen} inutilizable salvo que sea \char`\"{}reinicializada\char`\"{} 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\label{classImagen_af964c504603e4d347d1d31f5d7e2a93d}} 
+\index{Imagen@{Imagen}!AumentarContraste@{AumentarContraste}}
+\index{AumentarContraste@{AumentarContraste}!Imagen@{Imagen}}
+\doxysubsubsection{AumentarContraste()}
+{\footnotesize\ttfamily void Imagen\+::\+Aumentar\+Contraste (\begin{DoxyParamCaption}\item[{const int}]{e1,  }\item[{const int}]{e2,  }\item[{const int}]{s1,  }\item[{const int}]{s2 }\end{DoxyParamCaption})}
+
+
+
+Aumenta el contraste de una imagen mediante un estiramiento de su histograma. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fich\+\_\+orig} & Nombre del fichero que contiene la imagen original \\
+\hline
+{\em fich\+\_\+rdo} & Nombre del fichero que contendrá el resultado \\
+\hline
+{\em e1} & Coordenada x del primer punto que transforma la gráfica de la \\
+\hline
+{\em e2} & \\
+\hline
+{\em s1} & \\
+\hline
+{\em s2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Si la operación ha tenido éxito 
+\end{DoxyReturn}
+\mbox{\label{classImagen_ab0cafb3982c3e462e19dbe5d00dec613}} 
+\index{Imagen@{Imagen}!Ecualizar@{Ecualizar}}
+\index{Ecualizar@{Ecualizar}!Imagen@{Imagen}}
+\doxysubsubsection{Ecualizar()}
+{\footnotesize\ttfamily void Imagen\+::\+Ecualizar (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+Llena la imagen de píxeles de la luminosidad indicada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valor} & Valor con el que se rellenará la imagen \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classImagen_af90fd57d87b22381badce1bcc6f232b6}} 
+\index{Imagen@{Imagen}!EcualizarColumna@{EcualizarColumna}}
+\index{EcualizarColumna@{EcualizarColumna}!Imagen@{Imagen}}
+\doxysubsubsection{EcualizarColumna()}
+{\footnotesize\ttfamily void Imagen\+::\+Ecualizar\+Columna (\begin{DoxyParamCaption}\item[{int}]{col,  }\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+Llena una columna de píxeles con el valor indicado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fil} & Índice de la columna a llenar \\
+\hline
+{\em valor} & Valor con el que se rellena la columna \\
+\hline
+\end{DoxyParams}
+
+
+Referenciado por \textbf{ Insertar\+Columna()}.
+
+\mbox{\label{classImagen_addac062b777cbdeb3966e2f7f1d9c4be}} 
+\index{Imagen@{Imagen}!EcualizarFila@{EcualizarFila}}
+\index{EcualizarFila@{EcualizarFila}!Imagen@{Imagen}}
+\doxysubsubsection{EcualizarFila()}
+{\footnotesize\ttfamily void Imagen\+::\+Ecualizar\+Fila (\begin{DoxyParamCaption}\item[{int}]{fil,  }\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+Llena una fila de píxeles con el valor indicado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fil} & Índice de la fila a llenar \\
+\hline
+{\em valor} & Valor con el que se rellena la fila \\
+\hline
+\end{DoxyParams}
+
+
+Referenciado por \textbf{ Insertar\+Fila()}.
+
+\mbox{\label{classImagen_a0858acd4183c994c8604bfaee5c9b070}} 
+\index{Imagen@{Imagen}!EscribirImagenPGM@{EscribirImagenPGM}}
+\index{EscribirImagenPGM@{EscribirImagenPGM}!Imagen@{Imagen}}
+\doxysubsubsection{EscribirImagenPGM()}
+{\footnotesize\ttfamily void Imagen\+::\+Escribir\+Imagen\+PGM (\begin{DoxyParamCaption}\item[{const string}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Guarda una imagen en formato PGM. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & Nombre del archivo de salida \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classImagen_ae1516fcbe43bfc322aaf94514d9adde3}} 
+\index{Imagen@{Imagen}!ExtraerSubimagen@{ExtraerSubimagen}}
+\index{ExtraerSubimagen@{ExtraerSubimagen}!Imagen@{Imagen}}
+\doxysubsubsection{ExtraerSubimagen()}
+{\footnotesize\ttfamily void Imagen\+::\+Extraer\+Subimagen (\begin{DoxyParamCaption}\item[{const \textbf{ Imagen} \&}]{otra,  }\item[{const int}]{fil,  }\item[{const int}]{col,  }\item[{const int}]{fils\+\_\+sub,  }\item[{const int}]{cols\+\_\+sub }\end{DoxyParamCaption})}
+
+
+
+Extrae una subimagen PGM de otra imagen PGM. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em otra} & \doxyref{Imagen}{p.}{classImagen} de la que extraer la subimagen \\
+\hline
+{\em fil} & Índice de la fila a partir de la cual se creará la subimagen resultante \\
+\hline
+{\em col} & Índice de la columna a partir de la cual se creará la subimagen resultante \\
+\hline
+{\em fils\+\_\+sub} & Tamaño vertical de la imagen resultado \\
+\hline
+{\em cols\+\_\+sub} & Tamaño horizontal de la imagen resultado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+(fil + filas\+\_\+sub) $<$ fich\+\_\+orig.\+Num\+Filas() \&\& (col + filas\+\_\+col) $<$ fich\+\_\+orig.\+Num\+Columnas() 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El contenido de la imagen se ve reescrito por el de la subimagen indicada de otra. 
+\end{DoxyPostcond}
+
+
+Hace referencia a \textbf{ Get\+Valor()} y \textbf{ Set\+Valor()}.
+
+
+
+Referenciado por \textbf{ Hacer\+Zoom()}.
+
+\mbox{\label{classImagen_a290f1372b6898f64616537f62626055d}} 
+\index{Imagen@{Imagen}!GetValor@{GetValor}}
+\index{GetValor@{GetValor}!Imagen@{Imagen}}
+\doxysubsubsection{GetValor()}
+{\footnotesize\ttfamily byte Imagen\+::\+Get\+Valor (\begin{DoxyParamCaption}\item[{int}]{fil,  }\item[{int}]{col }\end{DoxyParamCaption}) const}
+
+
+
+Consulta el valor de un píxel de la imagen. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fil} & Índice de la fila del píxel cuyo valor se quiere consultar \\
+\hline
+{\em col} & índice de la columna del píxel cuyo valor se quiere consultar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+0 $<$= fil $<$ \doxyref{Num\+Filas()}{p.}{classImagen_aad51d7a6f24e935964cc588f9bc4ff5c} \&\& 0 $<$= col $<$ \doxyref{Num\+Columnas()}{p.}{classImagen_adf76fe20e581aca77cc3e76cbca48fc9} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+Valor de luminosidad del píxel especificado 
+\end{DoxyReturn}
+
+
+Referenciado por \textbf{ Extraer\+Subimagen()}.
+
+\mbox{\label{classImagen_a327034af4e2e896dfc35dd540bf8e045}} 
+\index{Imagen@{Imagen}!HacerZoom@{HacerZoom}}
+\index{HacerZoom@{HacerZoom}!Imagen@{Imagen}}
+\doxysubsubsection{HacerZoom()}
+{\footnotesize\ttfamily void Imagen\+::\+Hacer\+Zoom (\begin{DoxyParamCaption}\item[{const \textbf{ Imagen} \&}]{otra,  }\item[{const int}]{fil,  }\item[{const int}]{col,  }\item[{const int}]{fils\+\_\+sub,  }\item[{const int}]{cols\+\_\+sub }\end{DoxyParamCaption})}
+
+
+
+Hace zoom a una imagen, esto es\+: 
+
+
+\begin{DoxyItemize}
+\item Extrae de ella una subimagen.
+\item Aplica a la subimagen una interpolacion consistente en añadir filas (y columnas) en las que el valor de cada píxel será una media de los valores de los píxeles que tenga arriba y abajo (a izquierda y derecha, respectivamente)
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fich\+\_\+orig} & Nombre del fichero que contiene la imagen original \\
+\hline
+{\em fich\+\_\+rdo} & Nombre del fichero que contendrá el resultado \\
+\hline
+{\em fil} & Fila a partir de la cual se creará la subimagen resultante \\
+\hline
+{\em col} & Columna a partir de la cual se creará la subimagen resultante \\
+\hline
+{\em fils\+\_\+sub} & Tamaño vertical de la imagen resultado \\
+\hline
+{\em cols\+\_\+sub} & Tamaño horizontal de la imagen resultado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+(fil + filas\+\_\+sub) $<$ fich\+\_\+orig.\+Num\+Filas() \&\& (col + filas\+\_\+col) $<$ fich\+\_\+orig.\+Num\+Columnas() 
+\end{DoxyPrecond}
+
+
+Hace referencia a \textbf{ Extraer\+Subimagen()} y \textbf{ Interpolar()}.
+
+\mbox{\label{classImagen_a09d18aa462dd4dcdf02bde211d19e62c}} 
+\index{Imagen@{Imagen}!InsertarColumna@{InsertarColumna}}
+\index{InsertarColumna@{InsertarColumna}!Imagen@{Imagen}}
+\doxysubsubsection{InsertarColumna()}
+{\footnotesize\ttfamily void Imagen\+::\+Insertar\+Columna (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Inserta una columna de píxeles vacíos en la posición indicada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pos} & Índice en el que se insertará la columna de píxeles \\
+\hline
+\end{DoxyParams}
+
+
+Hace referencia a \textbf{ Ecualizar\+Columna()}.
+
+
+
+Referenciado por \textbf{ Interpolar()}.
+
+\mbox{\label{classImagen_ae3324a79f93ce312b9399657971fe608}} 
+\index{Imagen@{Imagen}!InsertarFila@{InsertarFila}}
+\index{InsertarFila@{InsertarFila}!Imagen@{Imagen}}
+\doxysubsubsection{InsertarFila()}
+{\footnotesize\ttfamily void Imagen\+::\+Insertar\+Fila (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Inserta una fila de píxeles vacíos en la posición indicada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pos} & Índice en el que se insertará la fila de píxeles \\
+\hline
+\end{DoxyParams}
+
+
+Hace referencia a \textbf{ Ecualizar\+Fila()}.
+
+
+
+Referenciado por \textbf{ Interpolar()}.
+
+\mbox{\label{classImagen_af5bb1e291334ed1fe9f6da3e4aaa531f}} 
+\index{Imagen@{Imagen}!LeerImagenPGM@{LeerImagenPGM}}
+\index{LeerImagenPGM@{LeerImagenPGM}!Imagen@{Imagen}}
+\doxysubsubsection{LeerImagenPGM()}
+{\footnotesize\ttfamily void Imagen\+::\+Leer\+Imagen\+PGM (\begin{DoxyParamCaption}\item[{const string}]{nombre }\end{DoxyParamCaption})}
+
+
+
+Lee una imagen PGM. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & Nombre del archivo de entrada \\
+\hline
+\end{DoxyParams}
+\mbox{\label{classImagen_adf76fe20e581aca77cc3e76cbca48fc9}} 
+\index{Imagen@{Imagen}!NumColumnas@{NumColumnas}}
+\index{NumColumnas@{NumColumnas}!Imagen@{Imagen}}
+\doxysubsubsection{NumColumnas()}
+{\footnotesize\ttfamily int Imagen\+::\+Num\+Columnas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el número de columnas de la imagen. 
+
+\begin{DoxyReturn}{Devuelve}
+Número de columnas de la imagen 
+\end{DoxyReturn}
+\mbox{\label{classImagen_aad51d7a6f24e935964cc588f9bc4ff5c}} 
+\index{Imagen@{Imagen}!NumFilas@{NumFilas}}
+\index{NumFilas@{NumFilas}!Imagen@{Imagen}}
+\doxysubsubsection{NumFilas()}
+{\footnotesize\ttfamily int Imagen\+::\+Num\+Filas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el número de filas de la imagen. 
+
+\begin{DoxyReturn}{Devuelve}
+Número de filas de la imagen 
+\end{DoxyReturn}
+\mbox{\label{classImagen_aa8bdc0191ef1b952a6405273edf3f3c8}} 
+\index{Imagen@{Imagen}!operator=@{operator=}}
+\index{operator=@{operator=}!Imagen@{Imagen}}
+\doxysubsubsection{operator=()}
+{\footnotesize\ttfamily \textbf{ Imagen} \& Imagen\+::operator= (\begin{DoxyParamCaption}\item[{const \textbf{ Imagen} \&}]{otra }\end{DoxyParamCaption})}
+
+
+
+Operador = de la clase imagen, que copia los datos de otra. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em otra} & \doxyref{Imagen}{p.}{classImagen} que se quiere copiar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Referencia a un objeto \doxyref{Imagen}{p.}{classImagen} 
+\end{DoxyReturn}
+\mbox{\label{classImagen_a74d67e7a623f3ae59c17f4c2a28c3b5a}} 
+\index{Imagen@{Imagen}!SetValor@{SetValor}}
+\index{SetValor@{SetValor}!Imagen@{Imagen}}
+\doxysubsubsection{SetValor()}
+{\footnotesize\ttfamily void Imagen\+::\+Set\+Valor (\begin{DoxyParamCaption}\item[{int}]{fil,  }\item[{int}]{col,  }\item[{byte}]{valor }\end{DoxyParamCaption})}
+
+
+
+Modifica el valor de un píxel de la imagen. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fil} & Índice de la fila del píxel cuyo valor se quiere modificar \\
+\hline
+{\em col} & Índice de la columna del píxel cuyo valor se quiere modificar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondición}
+0 $<$= fil $<$ \doxyref{Num\+Filas()}{p.}{classImagen_aad51d7a6f24e935964cc588f9bc4ff5c} \&\& 0 $<$= col $<$ \doxyref{Num\+Columnas()}{p.}{classImagen_adf76fe20e581aca77cc3e76cbca48fc9} \&\& 0 $<$= valor $<$= 255 
+\end{DoxyPrecond}
+
+
+Referenciado por \textbf{ Extraer\+Subimagen()}.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ imagen.\+h}\item 
+\textbf{ imagen.\+cpp}\end{DoxyCompactItemize}

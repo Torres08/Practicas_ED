@@ -1,0 +1,117 @@
+\doxysection{imagen.\+h}
+\textbf{ Ir a la documentación de este archivo.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef IMAGEN}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define IMAGEN}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} byte;}
+\DoxyCodeLine{19 \textcolor{keyword}{enum} TipoImagen\{IMG\_DESCONOCIDO, IMG\_PGM\};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }Imagen}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \textcolor{keyword}{private}:}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{byte}** datos;}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} filas, columnas;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keyword}{public}:}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{36     Imagen();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{48     Imagen(\textcolor{keywordtype}{int} fils, \textcolor{keywordtype}{int} cols);}
+\DoxyCodeLine{49     }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{58     Imagen(\textcolor{keyword}{const} Imagen \& otra);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66     \string~Imagen();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 }
+\DoxyCodeLine{76     Imagen \& operator =(\textcolor{keyword}{const} Imagen \& otra);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{int} NumFilas() \textcolor{keyword}{const};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 }
+\DoxyCodeLine{92     \textcolor{keywordtype}{int} NumColumnas() \textcolor{keyword}{const};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 }
+\DoxyCodeLine{101     \textcolor{keywordtype}{void} LeerImagenPGM(\textcolor{keyword}{const} \textcolor{keywordtype}{string} nombre);}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 }
+\DoxyCodeLine{110     \textcolor{keywordtype}{void} EscribirImagenPGM(\textcolor{keyword}{const} \textcolor{keywordtype}{string} nombre);}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 }
+\DoxyCodeLine{122     \textcolor{keywordtype}{byte} GetValor(\textcolor{keywordtype}{int} fil, \textcolor{keywordtype}{int} col) \textcolor{keyword}{const};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 }
+\DoxyCodeLine{134     \textcolor{keywordtype}{void} SetValor(\textcolor{keywordtype}{int} fil, \textcolor{keywordtype}{int} col, \textcolor{keywordtype}{byte} valor);}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136 }
+\DoxyCodeLine{143     \textcolor{keywordtype}{void} InsertarFila(\textcolor{keywordtype}{int} pos);}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 }
+\DoxyCodeLine{152     \textcolor{keywordtype}{void} InsertarColumna(\textcolor{keywordtype}{int} pos);}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154 }
+\DoxyCodeLine{161     \textcolor{keywordtype}{void} Ecualizar(\textcolor{keywordtype}{int} valor);}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 }
+\DoxyCodeLine{171     \textcolor{keywordtype}{void} EcualizarFila(\textcolor{keywordtype}{int} fil, \textcolor{keywordtype}{int} valor);}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 }
+\DoxyCodeLine{181     \textcolor{keywordtype}{void} EcualizarColumna(\textcolor{keywordtype}{int} col, \textcolor{keywordtype}{int} valor);}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183 }
+\DoxyCodeLine{200     \textcolor{keywordtype}{void} ExtraerSubimagen(\textcolor{keyword}{const} Imagen\& otra, \textcolor{keyword}{const} \textcolor{keywordtype}{int} fil, \textcolor{keyword}{const} \textcolor{keywordtype}{int} col,}
+\DoxyCodeLine{201                           \textcolor{keyword}{const} \textcolor{keywordtype}{int} fils\_sub, \textcolor{keyword}{const} \textcolor{keywordtype}{int} cols\_sub);}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203 }
+\DoxyCodeLine{222     \textcolor{keywordtype}{void} HacerZoom(\textcolor{keyword}{const} Imagen\& otra, \textcolor{keyword}{const} \textcolor{keywordtype}{int} fil, \textcolor{keyword}{const} \textcolor{keywordtype}{int} col,}
+\DoxyCodeLine{223                    \textcolor{keyword}{const} \textcolor{keywordtype}{int} fils\_sub, \textcolor{keyword}{const} \textcolor{keywordtype}{int} cols\_sub);}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225 }
+\DoxyCodeLine{233     \textcolor{keywordtype}{void} Interpolar();}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235 }
+\DoxyCodeLine{249     \textcolor{keywordtype}{void} AumentarContraste(\textcolor{keyword}{const} \textcolor{keywordtype}{int} e1, \textcolor{keyword}{const} \textcolor{keywordtype}{int} e2, \textcolor{keyword}{const} \textcolor{keywordtype}{int} s1,}
+\DoxyCodeLine{250                            \textcolor{keyword}{const} \textcolor{keywordtype}{int} s2);}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253     \textcolor{keyword}{private}:}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{262     \textcolor{keywordtype}{void} ReservarMemoria(\textcolor{keywordtype}{int} fils, \textcolor{keywordtype}{int} cols);}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264 }
+\DoxyCodeLine{268     \textcolor{keywordtype}{void} LiberarMemoria();}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270 }
+\DoxyCodeLine{277     \textcolor{keywordtype}{void} CopiarDatos(\textcolor{keyword}{const} Imagen otra);}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279 }
+\DoxyCodeLine{289     TipoImagen LeerTipoImagen(ifstream\& f);}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{291 }
+\DoxyCodeLine{301     TipoImagen LeerTipoImagen(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* nombre);}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{303 }
+\DoxyCodeLine{312     \textcolor{keywordtype}{char} SaltarSeparadores(ifstream\& f);}
+\DoxyCodeLine{313 }
+\DoxyCodeLine{314 }
+\DoxyCodeLine{322     \textcolor{keywordtype}{bool} LeerCabecera(ifstream\& f, \textcolor{keywordtype}{int}\& fils, \textcolor{keywordtype}{int}\& cols);}
+\DoxyCodeLine{323 \};}
+\DoxyCodeLine{324 }
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

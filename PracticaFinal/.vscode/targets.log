@@ -1,0 +1,542 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+makefile:80: warning: overriding recipe for target 'obj/cantidadletras.o'
+makefile:62: warning: ignoring old recipe for target 'obj/cantidadletras.o'
+ 
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Jan  6 22:23:42 2022
+
+# Variables
+
+# makefile (from 'makefile', line 2)
+OBJ = obj
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# makefile (from 'makefile', line 3)
+SRC = src
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-132c6a08-0db1-4af8-8c38-4795f9562b74.sock
+# environment
+VSCODE_CWD = /home/icaro
+# environment
+LESS_TERMCAP_me = [0m
+# environment
+GDM_LANG = es_ES.utf8
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/icaro/Escritorio/PracticaFinal
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share
+# environment
+OLDPWD = /home/icaro
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = true
+# automatic
+%F = $(notdir $%)
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# environment
+LANG = C
+# environment
+POWERSHELL_UPDATECHECK = Off
+# environment
+XAUTHORITY = /home/icaro/.Xauthority
+# default
+.LOADED := 
+# environment
+LESS_TERMCAP_md = [1;36m
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environment
+LESS_TERMCAP_so = [01;33m
+# makefile
+CURDIR := /home/icaro/Escritorio/PracticaFinal
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+LESS_TERMCAP_ue = [0m
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXDXa9SA/agent.971
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"Code - OSS","submitURL":"","uploadToServer":false}
+# environment
+XDG_SESSION_DESKTOP = lightdm-xsession
+# makefile (from 'makefile', line 1)
+MAKEFILE_LIST := makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 33532
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+SESSION_MANAGER = local/kali:@/tmp/.ICE-unix/971,unix/kali:/tmp/.ICE-unix/971
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# environment
+CHROME_DESKTOP = code-oss-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from 'makefile', line 5)
+LIB = lib
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{},"_languagePackSupport":true}
+# environment
+BREAKPAD_DUMP_LOCATION = /home/icaro/.config/Code - OSS/exthost Crash Reports
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# environment
+LESS_TERMCAP_us = [1;32m
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+# environment
+LESS_TERMCAP_se = [0m
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+COMMAND_NOT_FOUND_INSTALL_PROMPT = 1
+# environment
+LESS_TERMCAP_mb = [1;31m
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?F = $(notdir $?)
+# makefile (from 'makefile', line 1)
+INC = include
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = XFCE
+# environment
+LS_COLORS = 
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = lightdm-xsession
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = icaro
+# makefile (from 'makefile', line 8)
+CPPFLAGS = -Wall -g -std=c++11
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code-oss.desktop
+# environment
+XDG_VTNR = 7
+# makefile
+.DEFAULT_GOAL := documentacion
+# environment
+DISPLAY = :0.0
+# environment
+USER = icaro
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 33532
+# environment
+SSH_AGENT_PID = 1018
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = 
+# environment
+_ = /usr/lib/code-oss/code-oss
+# makefile (from 'makefile', line 4)
+BIN = bin
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+POWERSHELL_TELEMETRY_OPTOUT = 1
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/icaro
+# environment
+_JAVA_OPTIONS = -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-f9f071d1-1.56.1-main.sock
+# environment
+GSETTINGS_SCHEMA_DIR = /home/icaro/data
+# environment
+XDG_SESSION_ID = 2
+# environment
+DOTNET_CLI_TELEMETRY_OPTOUT = 1
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'makefile', line 6)
+DATOS = datos
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# makefile (from 'makefile', line 9)
+CXXFLAGS = -c -I./$(INC)
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm/data/icaro
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'makefile', line 7)
+CXX = g++
+# environment
+XDG_MENU_PREFIX = xfce-
+# environment
+GDMSESSION = lightdm-xsession
+# variable set hash-table stats:
+# Load=116/1024=11%, Rehash=0, Collisions=20/195=10%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 66309, inode 14026200): 11 files, no impossibilities.
+
+# 11 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+include/bolsaletras.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/diccionario.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/testcantidadletras.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+obj/diccionario.o: src/diccionario.cpp include/diccionario.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 46):
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+
+bin/testcantidad: obj/usocantidadletras.o lib/libcantidad.a
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 53):
+	$(CXX) -o $@ $< -lcantidad -L./$(LIB)
+
+autor:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 96):
+	@echo "Torres Ramos, Juan Luis"
+
+letras: bin/letras
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/letras.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/cantidadletras.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+testdiccionario:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 24):
+	./$(BIN)/testdiccionario ./$(DATOS)/diccionario1000.txt
+
+obj/usodiccionario.o: src/testdiccionario.cpp
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/usodiccionario.o
+# automatic
+# * := 
+# automatic
+# < := src/testdiccionario.cpp
+# automatic
+# + := src/testdiccionario.cpp
+# automatic
+# % := 
+# automatic
+# ^ := src/testdiccionario.cpp
+# automatic
+# ? := src/testdiccionario.cpp
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/17=12%
+#  recipe to execute (from 'makefile', line 43):
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+
+mrproper: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 93):
+	-rm -r doc/html doc/latex doc/man doc/xml
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 85):
+	@echo "Limpiando..."
+	@rm -f $(OBJ)/*
+	@rm -f $(BIN)/* 
+	@rm -f $(LIB)/*
+	@rm -rf $(DOC)
+	@echo "Archivos borrados con exito"
+
+obj/bolsaletras.o: src/bolsaletras.cpp include/bolsaletras.h include/conjuntoletras.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 77):
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+
+# Not a target:
+src/bolsaletras.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/testdiccionario: obj/usodiccionario.o lib/libdiccionario.a
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
+#  recipe to execute (from 'makefile', line 37):
+	$(CXX) -o $@ $< -ldiccionario -L./$(LIB)
+
+testletras:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 30):
+	./$(BIN)/letras ./$(DATOS)/diccionario1.txt ./$(DATOS)/letras.txt ./$(DATOS)/salida.txt
+
+obj/usocantidadletras.o: src/testcantidadletras.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 56):
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+
+diccionario: bin/testdiccionario
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+cantidad: bin/testcantidad
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+lib/libletras.a: obj/bolsaletras.o obj/cantidadletras.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 74):
+	ar -rvs $@ $^
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: bin/testdiccionario bin/testcantidad bin/letras
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
+
+obj/cantidadletras.o: src/cantidadletras.cpp include/cantidadletras.h include/diccionario.h src/cantidadletras.cpp include/cantidadletras.h include/diccionario.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 80):
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+
+lib/libcantidad.a: obj/diccionario.o obj/cantidadletras.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 59):
+	ar -rvs $@ $^
+
+# Not a target:
+src/testdiccionario.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-28 19:10:51.73505504
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-30 13:44:29.609744609
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+include/cantidadletras.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+include/conjuntoletras.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+documentacion:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 15):
+	doxygen doc/doxys/Doxyfile
+
+bin/letras: src/letras.cpp lib/libletras.a
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 71):
+	$(CXX) -o $@ $< -lletras -L./$(LIB)
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/diccionario.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+testcantidad:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 27):
+	./$(BIN)/testcantidad ./$(DATOS)/diccionario1.txt ./$(DATOS)/letras.txt ./$(DATOS)/salida.txt 
+
+lib/libdiccionario.a: obj/diccionario.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 40):
+	ar -rvs $@ $^
+
+# files hash-table stats:
+# Load=35/1024=3%, Rehash=0, Collisions=2/90=2%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 47 / storage = 642 B / avg = 13 B
+# current buf: size = 8162 B / used = 642 B / count = 47 / avg = 13 B
+
+# strcache performance: lookups = 98 / hit rate = 52%
+# hash-table stats:
+# Load=47/8192=1%, Rehash=0, Collisions=0/98=0%
+# Finished Make data base on Thu Jan  6 22:23:42 2022
+
+ 

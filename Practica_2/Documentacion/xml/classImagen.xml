@@ -1,0 +1,1065 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="es">
+  <compounddef id="classImagen" kind="class" language="C++" prot="public">
+    <compoundname>Imagen</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classImagen_1a74bf3487e42bb65862e994883fa05b33" prot="private" static="no" mutable="no">
+        <type>byte **</type>
+        <definition>byte** Imagen::datos</definition>
+        <argsstring></argsstring>
+        <name>datos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="25" column="6" bodyfile="imagen.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classImagen_1a7f15719f14cd934dfcbd68c287bbbe8b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Imagen::filas</definition>
+        <argsstring></argsstring>
+        <name>filas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="26" column="5" bodyfile="imagen.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classImagen_1af63de0598ca965ab3a30b54ee7e2cedc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Imagen::columnas</definition>
+        <argsstring></argsstring>
+        <name>columnas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="26" column="11" bodyfile="imagen.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classImagen_1ab2e649aa7a105155c7bfdb846abf0528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Imagen::Imagen</definition>
+        <argsstring>()</argsstring>
+        <name>Imagen</name>
+        <briefdescription>
+<para>Constructor por defecto de la clase imagen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="post"><para><ref refid="classImagen" kindref="compound">Imagen</ref> vacía, sin filas ni columnas </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="36" column="1" bodyfile="imagen.cpp" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a443a2f2b1982ea112b4f202ae9eb191b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Imagen::Imagen</definition>
+        <argsstring>(int fils, int cols)</argsstring>
+        <name>Imagen</name>
+        <param>
+          <type>int</type>
+          <declname>fils</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+<para>Constructor de imagen con filas filas y columnas columnas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fils</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número de filas de la imagen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Número de columnas de la imagen </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="pre"><para>filas &gt; 0 &amp;&amp; columnas &gt; 0 </para>
+</simplesect>
+<simplesect kind="post"><para><ref refid="classImagen" kindref="compound">Imagen</ref> con valores basura, sin inicializar </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="48" column="1" bodyfile="imagen.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a33f5f31d610526dbe66d04de0a827f91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Imagen::Imagen</definition>
+        <argsstring>(const Imagen &amp;otra)</argsstring>
+        <name>Imagen</name>
+        <param>
+          <type>const <ref refid="classImagen" kindref="compound">Imagen</ref> &amp;</type>
+          <declname>otra</declname>
+        </param>
+        <briefdescription>
+<para>Constructor de copia de la clase imagen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>otra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classImagen" kindref="compound">Imagen</ref> que se quiere copiar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="post"><para>La imagen será identica a otra </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="58" column="1" bodyfile="imagen.cpp" bodystart="32" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a03dd93c9cf920a9dc0b72f8bd34f2e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Imagen::~Imagen</definition>
+        <argsstring>()</argsstring>
+        <name>~Imagen</name>
+        <briefdescription>
+<para>Destructor de la clase <ref refid="classImagen" kindref="compound">Imagen</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="post"><para><ref refid="classImagen" kindref="compound">Imagen</ref> inutilizable salvo que sea &quot;reinicializada&quot; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="66" column="1" bodyfile="imagen.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1aa8bdc0191ef1b952a6405273edf3f3c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classImagen" kindref="compound">Imagen</ref> &amp;</type>
+        <definition>Imagen &amp; Imagen::operator=</definition>
+        <argsstring>(const Imagen &amp;otra)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classImagen" kindref="compound">Imagen</ref> &amp;</type>
+          <declname>otra</declname>
+        </param>
+        <briefdescription>
+<para>Operador = de la clase imagen, que copia los datos de otra. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>otra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classImagen" kindref="compound">Imagen</ref> que se quiere copiar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Referencia a un objeto <ref refid="classImagen" kindref="compound">Imagen</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="76" column="9" bodyfile="imagen.cpp" bodystart="49" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1aad51d7a6f24e935964cc588f9bc4ff5c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Imagen::NumFilas</definition>
+        <argsstring>() const</argsstring>
+        <name>NumFilas</name>
+        <briefdescription>
+<para>Devuelve el número de filas de la imagen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Número de filas de la imagen </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="84" column="5" bodyfile="imagen.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1adf76fe20e581aca77cc3e76cbca48fc9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Imagen::NumColumnas</definition>
+        <argsstring>() const</argsstring>
+        <name>NumColumnas</name>
+        <briefdescription>
+<para>Devuelve el número de columnas de la imagen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Número de columnas de la imagen </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="92" column="5" bodyfile="imagen.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1af5bb1e291334ed1fe9f6da3e4aaa531f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::LeerImagenPGM</definition>
+        <argsstring>(const string nombre)</argsstring>
+        <name>LeerImagenPGM</name>
+        <param>
+          <type>const string</type>
+          <declname>nombre</declname>
+        </param>
+        <briefdescription>
+<para>Lee una imagen PGM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nombre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nombre del archivo de entrada </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="101" column="6" bodyfile="imagen.cpp" bodystart="84" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a0858acd4183c994c8604bfaee5c9b070" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::EscribirImagenPGM</definition>
+        <argsstring>(const string nombre)</argsstring>
+        <name>EscribirImagenPGM</name>
+        <param>
+          <type>const string</type>
+          <declname>nombre</declname>
+        </param>
+        <briefdescription>
+<para>Guarda una imagen en formato PGM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nombre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nombre del archivo de salida </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="110" column="6" bodyfile="imagen.cpp" bodystart="113" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a290f1372b6898f64616537f62626055d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>byte</type>
+        <definition>byte Imagen::GetValor</definition>
+        <argsstring>(int fil, int col) const</argsstring>
+        <name>GetValor</name>
+        <param>
+          <type>int</type>
+          <declname>fil</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Consulta el valor de un píxel de la imagen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fil</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Índice de la fila del píxel cuyo valor se quiere consultar </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>índice de la columna del píxel cuyo valor se quiere consultar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="pre"><para>0 &lt;= fil &lt; <ref refid="classImagen_1aad51d7a6f24e935964cc588f9bc4ff5c" kindref="member">NumFilas()</ref> &amp;&amp; 0 &lt;= col &lt; <ref refid="classImagen_1adf76fe20e581aca77cc3e76cbca48fc9" kindref="member">NumColumnas()</ref> </para>
+</simplesect>
+<simplesect kind="return"><para>Valor de luminosidad del píxel especificado </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="122" column="6" bodyfile="imagen.cpp" bodystart="133" bodyend="136"/>
+        <referencedby refid="classImagen_1ae1516fcbe43bfc322aaf94514d9adde3" compoundref="imagen_8cpp" startline="244" endline="258">ExtraerSubimagen</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a74d67e7a623f3ae59c17f4c2a28c3b5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::SetValor</definition>
+        <argsstring>(int fil, int col, byte valor)</argsstring>
+        <name>SetValor</name>
+        <param>
+          <type>int</type>
+          <declname>fil</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>valor</declname>
+        </param>
+        <briefdescription>
+<para>Modifica el valor de un píxel de la imagen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fil</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Índice de la fila del píxel cuyo valor se quiere modificar </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Índice de la columna del píxel cuyo valor se quiere modificar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="pre"><para>0 &lt;= fil &lt; <ref refid="classImagen_1aad51d7a6f24e935964cc588f9bc4ff5c" kindref="member">NumFilas()</ref> &amp;&amp; 0 &lt;= col &lt; <ref refid="classImagen_1adf76fe20e581aca77cc3e76cbca48fc9" kindref="member">NumColumnas()</ref> &amp;&amp; 0 &lt;= valor &lt;= 255 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="134" column="6" bodyfile="imagen.cpp" bodystart="141" bodyend="144"/>
+        <referencedby refid="classImagen_1ae1516fcbe43bfc322aaf94514d9adde3" compoundref="imagen_8cpp" startline="244" endline="258">ExtraerSubimagen</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1ae3324a79f93ce312b9399657971fe608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::InsertarFila</definition>
+        <argsstring>(int pos)</argsstring>
+        <name>InsertarFila</name>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Inserta una fila de píxeles vacíos en la posición indicada. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Índice en el que se insertará la fila de píxeles </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="143" column="6" bodyfile="imagen.cpp" bodystart="149" bodyend="172"/>
+        <references refid="classImagen_1addac062b777cbdeb3966e2f7f1d9c4be" compoundref="imagen_8cpp" startline="222" endline="228">EcualizarFila</references>
+        <referencedby refid="classImagen_1afbae8090d8cd667b592b63f7fe28c28e" compoundref="imagen_8cpp" startline="273" endline="296">Interpolar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a09d18aa462dd4dcdf02bde211d19e62c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::InsertarColumna</definition>
+        <argsstring>(int pos)</argsstring>
+        <name>InsertarColumna</name>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Inserta una columna de píxeles vacíos en la posición indicada. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Índice en el que se insertará la columna de píxeles </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="152" column="6" bodyfile="imagen.cpp" bodystart="177" bodyend="203"/>
+        <references refid="classImagen_1af90fd57d87b22381badce1bcc6f232b6" compoundref="imagen_8cpp" startline="233" endline="239">EcualizarColumna</references>
+        <referencedby refid="classImagen_1afbae8090d8cd667b592b63f7fe28c28e" compoundref="imagen_8cpp" startline="273" endline="296">Interpolar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1ab0cafb3982c3e462e19dbe5d00dec613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::Ecualizar</definition>
+        <argsstring>(int valor)</argsstring>
+        <name>Ecualizar</name>
+        <param>
+          <type>int</type>
+          <declname>valor</declname>
+        </param>
+        <briefdescription>
+<para>Llena la imagen de píxeles de la luminosidad indicada. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor con el que se rellenará la imagen </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="161" column="6" bodyfile="imagen.cpp" bodystart="208" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1addac062b777cbdeb3966e2f7f1d9c4be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::EcualizarFila</definition>
+        <argsstring>(int fil, int valor)</argsstring>
+        <name>EcualizarFila</name>
+        <param>
+          <type>int</type>
+          <declname>fil</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>valor</declname>
+        </param>
+        <briefdescription>
+<para>Llena una fila de píxeles con el valor indicado. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fil</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Índice de la fila a llenar </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor con el que se rellena la fila </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="171" column="6" bodyfile="imagen.cpp" bodystart="222" bodyend="228"/>
+        <referencedby refid="classImagen_1ae3324a79f93ce312b9399657971fe608" compoundref="imagen_8cpp" startline="149" endline="172">InsertarFila</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1af90fd57d87b22381badce1bcc6f232b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::EcualizarColumna</definition>
+        <argsstring>(int col, int valor)</argsstring>
+        <name>EcualizarColumna</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>valor</declname>
+        </param>
+        <briefdescription>
+<para>Llena una columna de píxeles con el valor indicado. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fil</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Índice de la columna a llenar </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valor con el que se rellena la columna </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="181" column="6" bodyfile="imagen.cpp" bodystart="233" bodyend="239"/>
+        <referencedby refid="classImagen_1a09d18aa462dd4dcdf02bde211d19e62c" compoundref="imagen_8cpp" startline="177" endline="203">InsertarColumna</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1ae1516fcbe43bfc322aaf94514d9adde3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::ExtraerSubimagen</definition>
+        <argsstring>(const Imagen &amp;otra, const int fil, const int col, const int fils_sub, const int cols_sub)</argsstring>
+        <name>ExtraerSubimagen</name>
+        <param>
+          <type>const <ref refid="classImagen" kindref="compound">Imagen</ref> &amp;</type>
+          <declname>otra</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>fil</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>fils_sub</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>cols_sub</declname>
+        </param>
+        <briefdescription>
+<para>Extrae una subimagen PGM de otra imagen PGM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>otra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classImagen" kindref="compound">Imagen</ref> de la que extraer la subimagen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fil</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Índice de la fila a partir de la cual se creará la subimagen resultante </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Índice de la columna a partir de la cual se creará la subimagen resultante </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fils_sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamaño vertical de la imagen resultado </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols_sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamaño horizontal de la imagen resultado </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="pre"><para>(fil + filas_sub) &lt; fich_orig.NumFilas() &amp;&amp; (col + filas_col) &lt; fich_orig.NumColumnas() </para>
+</simplesect>
+<simplesect kind="post"><para>El contenido de la imagen se ve reescrito por el de la subimagen indicada de otra. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="200" column="6" bodyfile="imagen.cpp" bodystart="244" bodyend="258"/>
+        <references refid="classImagen_1a290f1372b6898f64616537f62626055d" compoundref="imagen_8cpp" startline="133" endline="136">GetValor</references>
+        <references refid="classImagen_1a74d67e7a623f3ae59c17f4c2a28c3b5a" compoundref="imagen_8cpp" startline="141" endline="144">SetValor</references>
+        <referencedby refid="classImagen_1a327034af4e2e896dfc35dd540bf8e045" compoundref="imagen_8cpp" startline="263" endline="268">HacerZoom</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a327034af4e2e896dfc35dd540bf8e045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::HacerZoom</definition>
+        <argsstring>(const Imagen &amp;otra, const int fil, const int col, const int fils_sub, const int cols_sub)</argsstring>
+        <name>HacerZoom</name>
+        <param>
+          <type>const <ref refid="classImagen" kindref="compound">Imagen</ref> &amp;</type>
+          <declname>otra</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>fil</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>fils_sub</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>cols_sub</declname>
+        </param>
+        <briefdescription>
+<para>Hace zoom a una imagen, esto es: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Extrae de ella una subimagen.</para>
+</listitem><listitem><para>Aplica a la subimagen una interpolacion consistente en añadir filas (y columnas) en las que el valor de cada píxel será una media de los valores de los píxeles que tenga arriba y abajo (a izquierda y derecha, respectivamente)</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fich_orig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nombre del fichero que contiene la imagen original </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fich_rdo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nombre del fichero que contendrá el resultado </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fil</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fila a partir de la cual se creará la subimagen resultante </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Columna a partir de la cual se creará la subimagen resultante </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fils_sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamaño vertical de la imagen resultado </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols_sub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tamaño horizontal de la imagen resultado </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="pre"><para>(fil + filas_sub) &lt; fich_orig.NumFilas() &amp;&amp; (col + filas_col) &lt; fich_orig.NumColumnas() </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="222" column="6" bodyfile="imagen.cpp" bodystart="263" bodyend="268"/>
+        <references refid="classImagen_1ae1516fcbe43bfc322aaf94514d9adde3" compoundref="imagen_8cpp" startline="244" endline="258">ExtraerSubimagen</references>
+        <references refid="classImagen_1afbae8090d8cd667b592b63f7fe28c28e" compoundref="imagen_8cpp" startline="273" endline="296">Interpolar</references>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1afbae8090d8cd667b592b63f7fe28c28e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::Interpolar</definition>
+        <argsstring>()</argsstring>
+        <name>Interpolar</name>
+        <briefdescription>
+<para>Aplica a la subimagen una interpolacion consistente en añadir filas (y columnas) en las que el valor de cada píxel será una media de los valores de los píxeles que tenga arriba y abajo (a izquierda y derecha, respectivamente) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="233" column="6" bodyfile="imagen.cpp" bodystart="273" bodyend="296"/>
+        <references refid="classImagen_1a09d18aa462dd4dcdf02bde211d19e62c" compoundref="imagen_8cpp" startline="177" endline="203">InsertarColumna</references>
+        <references refid="classImagen_1ae3324a79f93ce312b9399657971fe608" compoundref="imagen_8cpp" startline="149" endline="172">InsertarFila</references>
+        <referencedby refid="classImagen_1a327034af4e2e896dfc35dd540bf8e045" compoundref="imagen_8cpp" startline="263" endline="268">HacerZoom</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1af964c504603e4d347d1d31f5d7e2a93d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::AumentarContraste</definition>
+        <argsstring>(const int e1, const int e2, const int s1, const int s2)</argsstring>
+        <name>AumentarContraste</name>
+        <param>
+          <type>const int</type>
+          <declname>e1</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>e2</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+<para>Aumenta el contraste de una imagen mediante un estiramiento de su histograma. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fich_orig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nombre del fichero que contiene la imagen original </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fich_rdo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nombre del fichero que contendrá el resultado </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordenada x del primer punto que transforma la gráfica de la </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Si la operación ha tenido éxito </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="249" column="6" bodyfile="imagen.cpp" bodystart="301" bodyend="328"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classImagen_1a1b20b4eaa732af8c74e805480226dd1e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::ReservarMemoria</definition>
+        <argsstring>(int fils, int cols)</argsstring>
+        <name>ReservarMemoria</name>
+        <param>
+          <type>int</type>
+          <declname>fils</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+<para>Reserva memoria para un dato de tipo <ref refid="classImagen" kindref="compound">Imagen</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fils</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filas a reservar </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Columnas a reservar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="262" column="6" bodyfile="imagen.cpp" bodystart="333" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a8bb0feb19121db32f251d9408d2752d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::LiberarMemoria</definition>
+        <argsstring>()</argsstring>
+        <name>LiberarMemoria</name>
+        <briefdescription>
+<para>Libera la memoria ocupada por un objeto de tipo <ref refid="classImagen" kindref="compound">Imagen</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="268" column="6" bodyfile="imagen.cpp" bodystart="361" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1aca61daf97e30b7e6a3d08527b5dd79c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Imagen::CopiarDatos</definition>
+        <argsstring>(const Imagen otra)</argsstring>
+        <name>CopiarDatos</name>
+        <param>
+          <type>const <ref refid="classImagen" kindref="compound">Imagen</ref></type>
+          <declname>otra</declname>
+        </param>
+        <briefdescription>
+<para>Copia los datos de otra imagen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>otra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classImagen" kindref="compound">Imagen</ref> de la que se quieren copiar los datos </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="277" column="6" bodyfile="imagen.cpp" bodystart="381" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a9eb8fc244254ef82a6463c9d0740f92f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TipoImagen</type>
+        <definition>TipoImagen Imagen::LeerTipoImagen</definition>
+        <argsstring>(ifstream &amp;f)</argsstring>
+        <name>LeerTipoImagen</name>
+        <param>
+          <type>ifstream &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Devuelve el tipo de imagen del archivo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flujo a usar. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Devuelve el tipo de la imagen en el archivo</para>
+</simplesect>
+<simplesect kind="see"><para>TipoImagen </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="289" column="12" bodyfile="imagen.cpp" bodystart="399" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a63a7ae878bf5b08fe5b0254e5d22955e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TipoImagen</type>
+        <definition>TipoImagen Imagen::LeerTipoImagen</definition>
+        <argsstring>(const char *nombre)</argsstring>
+        <name>LeerTipoImagen</name>
+        <param>
+          <type>const char *</type>
+          <declname>nombre</declname>
+        </param>
+        <briefdescription>
+<para>Devuelve el tipo de imagen del archivo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nombre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Devuelve el tipo de la imagen en el archivo</para>
+</simplesect>
+<simplesect kind="see"><para>TipoImagen </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="301" column="12" bodyfile="imagen.cpp" bodystart="429" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a4bbb62e5f2690486fc1e7880c615d8c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char Imagen::SaltarSeparadores</definition>
+        <argsstring>(ifstream &amp;f)</argsstring>
+        <name>SaltarSeparadores</name>
+        <param>
+          <type>ifstream &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Permite saltar los separadores de un archivo PGM para leer seguidamente la imagen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flujo a usar para leer los separadores </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>char </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="312" column="6" bodyfile="imagen.cpp" bodystart="438" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="classImagen_1a364fe3e22864e0d0eebb9cc0e39022ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Imagen::LeerCabecera</definition>
+        <argsstring>(ifstream &amp;f, int &amp;fils, int &amp;cols)</argsstring>
+        <name>LeerCabecera</name>
+        <param>
+          <type>ifstream &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>fils</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+<para>Lee la cabecera de un archivo PGM, que contiene entre otras cosas las dimensiones de la imagen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flujo usado para leer la cabecera </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="imagen.h" line="322" column="6" bodyfile="imagen.cpp" bodystart="455" bodyend="478"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="imagen.h" line="21" column="1" bodyfile="imagen.h" bodystart="22" bodyend="323"/>
+    <listofallmembers>
+      <member refid="classImagen_1af964c504603e4d347d1d31f5d7e2a93d" prot="public" virt="non-virtual"><scope>Imagen</scope><name>AumentarContraste</name></member>
+      <member refid="classImagen_1af63de0598ca965ab3a30b54ee7e2cedc" prot="private" virt="non-virtual"><scope>Imagen</scope><name>columnas</name></member>
+      <member refid="classImagen_1aca61daf97e30b7e6a3d08527b5dd79c1" prot="private" virt="non-virtual"><scope>Imagen</scope><name>CopiarDatos</name></member>
+      <member refid="classImagen_1a74bf3487e42bb65862e994883fa05b33" prot="private" virt="non-virtual"><scope>Imagen</scope><name>datos</name></member>
+      <member refid="classImagen_1ab0cafb3982c3e462e19dbe5d00dec613" prot="public" virt="non-virtual"><scope>Imagen</scope><name>Ecualizar</name></member>
+      <member refid="classImagen_1af90fd57d87b22381badce1bcc6f232b6" prot="public" virt="non-virtual"><scope>Imagen</scope><name>EcualizarColumna</name></member>
+      <member refid="classImagen_1addac062b777cbdeb3966e2f7f1d9c4be" prot="public" virt="non-virtual"><scope>Imagen</scope><name>EcualizarFila</name></member>
+      <member refid="classImagen_1a0858acd4183c994c8604bfaee5c9b070" prot="public" virt="non-virtual"><scope>Imagen</scope><name>EscribirImagenPGM</name></member>
+      <member refid="classImagen_1ae1516fcbe43bfc322aaf94514d9adde3" prot="public" virt="non-virtual"><scope>Imagen</scope><name>ExtraerSubimagen</name></member>
+      <member refid="classImagen_1a7f15719f14cd934dfcbd68c287bbbe8b" prot="private" virt="non-virtual"><scope>Imagen</scope><name>filas</name></member>
+      <member refid="classImagen_1a290f1372b6898f64616537f62626055d" prot="public" virt="non-virtual"><scope>Imagen</scope><name>GetValor</name></member>
+      <member refid="classImagen_1a327034af4e2e896dfc35dd540bf8e045" prot="public" virt="non-virtual"><scope>Imagen</scope><name>HacerZoom</name></member>
+      <member refid="classImagen_1ab2e649aa7a105155c7bfdb846abf0528" prot="public" virt="non-virtual"><scope>Imagen</scope><name>Imagen</name></member>
+      <member refid="classImagen_1a443a2f2b1982ea112b4f202ae9eb191b" prot="public" virt="non-virtual"><scope>Imagen</scope><name>Imagen</name></member>
+      <member refid="classImagen_1a33f5f31d610526dbe66d04de0a827f91" prot="public" virt="non-virtual"><scope>Imagen</scope><name>Imagen</name></member>
+      <member refid="classImagen_1a09d18aa462dd4dcdf02bde211d19e62c" prot="public" virt="non-virtual"><scope>Imagen</scope><name>InsertarColumna</name></member>
+      <member refid="classImagen_1ae3324a79f93ce312b9399657971fe608" prot="public" virt="non-virtual"><scope>Imagen</scope><name>InsertarFila</name></member>
+      <member refid="classImagen_1afbae8090d8cd667b592b63f7fe28c28e" prot="public" virt="non-virtual"><scope>Imagen</scope><name>Interpolar</name></member>
+      <member refid="classImagen_1a364fe3e22864e0d0eebb9cc0e39022ee" prot="private" virt="non-virtual"><scope>Imagen</scope><name>LeerCabecera</name></member>
+      <member refid="classImagen_1af5bb1e291334ed1fe9f6da3e4aaa531f" prot="public" virt="non-virtual"><scope>Imagen</scope><name>LeerImagenPGM</name></member>
+      <member refid="classImagen_1a9eb8fc244254ef82a6463c9d0740f92f" prot="private" virt="non-virtual"><scope>Imagen</scope><name>LeerTipoImagen</name></member>
+      <member refid="classImagen_1a63a7ae878bf5b08fe5b0254e5d22955e" prot="private" virt="non-virtual"><scope>Imagen</scope><name>LeerTipoImagen</name></member>
+      <member refid="classImagen_1a8bb0feb19121db32f251d9408d2752d3" prot="private" virt="non-virtual"><scope>Imagen</scope><name>LiberarMemoria</name></member>
+      <member refid="classImagen_1adf76fe20e581aca77cc3e76cbca48fc9" prot="public" virt="non-virtual"><scope>Imagen</scope><name>NumColumnas</name></member>
+      <member refid="classImagen_1aad51d7a6f24e935964cc588f9bc4ff5c" prot="public" virt="non-virtual"><scope>Imagen</scope><name>NumFilas</name></member>
+      <member refid="classImagen_1aa8bdc0191ef1b952a6405273edf3f3c8" prot="public" virt="non-virtual"><scope>Imagen</scope><name>operator=</name></member>
+      <member refid="classImagen_1a1b20b4eaa732af8c74e805480226dd1e" prot="private" virt="non-virtual"><scope>Imagen</scope><name>ReservarMemoria</name></member>
+      <member refid="classImagen_1a4bbb62e5f2690486fc1e7880c615d8c1" prot="private" virt="non-virtual"><scope>Imagen</scope><name>SaltarSeparadores</name></member>
+      <member refid="classImagen_1a74d67e7a623f3ae59c17f4c2a28c3b5a" prot="public" virt="non-virtual"><scope>Imagen</scope><name>SetValor</name></member>
+      <member refid="classImagen_1a03dd93c9cf920a9dc0b72f8bd34f2e8a" prot="public" virt="non-virtual"><scope>Imagen</scope><name>~Imagen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

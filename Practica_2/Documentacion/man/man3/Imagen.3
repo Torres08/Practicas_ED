@@ -1,0 +1,429 @@
+.TH "Imagen" 3 "Miércoles, 10 de Noviembre de 2021" "tdaImagen" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Imagen
+.SH SYNOPSIS
+.br
+.PP
+.SS "Métodos públicos"
+
+.in +1c
+.ti -1c
+.RI "\fBImagen\fP ()"
+.br
+.RI "Constructor por defecto de la clase imagen\&. "
+.ti -1c
+.RI "\fBImagen\fP (int fils, int cols)"
+.br
+.RI "Constructor de imagen con filas filas y columnas columnas\&. "
+.ti -1c
+.RI "\fBImagen\fP (const \fBImagen\fP &otra)"
+.br
+.RI "Constructor de copia de la clase imagen\&. "
+.ti -1c
+.RI "\fB~Imagen\fP ()"
+.br
+.RI "Destructor de la clase \fBImagen\fP\&. "
+.ti -1c
+.RI "\fBImagen\fP & \fBoperator=\fP (const \fBImagen\fP &otra)"
+.br
+.RI "Operador = de la clase imagen, que copia los datos de otra\&. "
+.ti -1c
+.RI "int \fBNumFilas\fP () const"
+.br
+.RI "Devuelve el número de filas de la imagen\&. "
+.ti -1c
+.RI "int \fBNumColumnas\fP () const"
+.br
+.RI "Devuelve el número de columnas de la imagen\&. "
+.ti -1c
+.RI "void \fBLeerImagenPGM\fP (const string nombre)"
+.br
+.RI "Lee una imagen PGM\&. "
+.ti -1c
+.RI "void \fBEscribirImagenPGM\fP (const string nombre)"
+.br
+.RI "Guarda una imagen en formato PGM\&. "
+.ti -1c
+.RI "byte \fBGetValor\fP (int fil, int col) const"
+.br
+.RI "Consulta el valor de un píxel de la imagen\&. "
+.ti -1c
+.RI "void \fBSetValor\fP (int fil, int col, byte valor)"
+.br
+.RI "Modifica el valor de un píxel de la imagen\&. "
+.ti -1c
+.RI "void \fBInsertarFila\fP (int pos)"
+.br
+.RI "Inserta una fila de píxeles vacíos en la posición indicada\&. "
+.ti -1c
+.RI "void \fBInsertarColumna\fP (int pos)"
+.br
+.RI "Inserta una columna de píxeles vacíos en la posición indicada\&. "
+.ti -1c
+.RI "void \fBEcualizar\fP (int valor)"
+.br
+.RI "Llena la imagen de píxeles de la luminosidad indicada\&. "
+.ti -1c
+.RI "void \fBEcualizarFila\fP (int fil, int valor)"
+.br
+.RI "Llena una fila de píxeles con el valor indicado\&. "
+.ti -1c
+.RI "void \fBEcualizarColumna\fP (int col, int valor)"
+.br
+.RI "Llena una columna de píxeles con el valor indicado\&. "
+.ti -1c
+.RI "void \fBExtraerSubimagen\fP (const \fBImagen\fP &otra, const int fil, const int col, const int fils_sub, const int cols_sub)"
+.br
+.RI "Extrae una subimagen PGM de otra imagen PGM\&. "
+.ti -1c
+.RI "void \fBHacerZoom\fP (const \fBImagen\fP &otra, const int fil, const int col, const int fils_sub, const int cols_sub)"
+.br
+.RI "Hace zoom a una imagen, esto es: "
+.ti -1c
+.RI "void \fBInterpolar\fP ()"
+.br
+.RI "Aplica a la subimagen una interpolacion consistente en añadir filas (y columnas) en las que el valor de cada píxel será una media de los valores de los píxeles que tenga arriba y abajo (a izquierda y derecha, respectivamente) "
+.ti -1c
+.RI "void \fBAumentarContraste\fP (const int e1, const int e2, const int s1, const int s2)"
+.br
+.RI "Aumenta el contraste de una imagen mediante un estiramiento de su histograma\&. "
+.in -1c
+.SH "Documentación del constructor y destructor"
+.PP 
+.SS "Imagen::Imagen ()"
+
+.PP
+Constructor por defecto de la clase imagen\&. 
+.PP
+\fBPostcondición\fP
+.RS 4
+\fBImagen\fP vacía, sin filas ni columnas 
+.RE
+.PP
+
+.SS "Imagen::Imagen (int fils, int cols)"
+
+.PP
+Constructor de imagen con filas filas y columnas columnas\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIfils\fP Número de filas de la imagen 
+.br
+\fIcols\fP Número de columnas de la imagen 
+.RE
+.PP
+\fBPrecondición\fP
+.RS 4
+filas > 0 && columnas > 0 
+.RE
+.PP
+\fBPostcondición\fP
+.RS 4
+\fBImagen\fP con valores basura, sin inicializar 
+.RE
+.PP
+
+.SS "Imagen::Imagen (const \fBImagen\fP & otra)"
+
+.PP
+Constructor de copia de la clase imagen\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIotra\fP \fBImagen\fP que se quiere copiar 
+.RE
+.PP
+\fBPostcondición\fP
+.RS 4
+La imagen será identica a otra 
+.RE
+.PP
+
+.SS "Imagen::~Imagen ()"
+
+.PP
+Destructor de la clase \fBImagen\fP\&. 
+.PP
+\fBPostcondición\fP
+.RS 4
+\fBImagen\fP inutilizable salvo que sea 'reinicializada' 
+.RE
+.PP
+
+.SH "Documentación de las funciones miembro"
+.PP 
+.SS "void Imagen::AumentarContraste (const int e1, const int e2, const int s1, const int s2)"
+
+.PP
+Aumenta el contraste de una imagen mediante un estiramiento de su histograma\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIfich_orig\fP Nombre del fichero que contiene la imagen original 
+.br
+\fIfich_rdo\fP Nombre del fichero que contendrá el resultado 
+.br
+\fIe1\fP Coordenada x del primer punto que transforma la gráfica de la 
+.br
+\fIe2\fP 
+.br
+\fIs1\fP 
+.br
+\fIs2\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+Si la operación ha tenido éxito 
+.RE
+.PP
+
+.SS "void Imagen::Ecualizar (int valor)"
+
+.PP
+Llena la imagen de píxeles de la luminosidad indicada\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIvalor\fP Valor con el que se rellenará la imagen 
+.RE
+.PP
+
+.SS "void Imagen::EcualizarColumna (int col, int valor)"
+
+.PP
+Llena una columna de píxeles con el valor indicado\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIfil\fP Índice de la columna a llenar 
+.br
+\fIvalor\fP Valor con el que se rellena la columna 
+.RE
+.PP
+
+.PP
+Referenciado por \fBInsertarColumna()\fP\&.
+.SS "void Imagen::EcualizarFila (int fil, int valor)"
+
+.PP
+Llena una fila de píxeles con el valor indicado\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIfil\fP Índice de la fila a llenar 
+.br
+\fIvalor\fP Valor con el que se rellena la fila 
+.RE
+.PP
+
+.PP
+Referenciado por \fBInsertarFila()\fP\&.
+.SS "void Imagen::EscribirImagenPGM (const string nombre)"
+
+.PP
+Guarda una imagen en formato PGM\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fInombre\fP Nombre del archivo de salida 
+.RE
+.PP
+
+.SS "void Imagen::ExtraerSubimagen (const \fBImagen\fP & otra, const int fil, const int col, const int fils_sub, const int cols_sub)"
+
+.PP
+Extrae una subimagen PGM de otra imagen PGM\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIotra\fP \fBImagen\fP de la que extraer la subimagen 
+.br
+\fIfil\fP Índice de la fila a partir de la cual se creará la subimagen resultante 
+.br
+\fIcol\fP Índice de la columna a partir de la cual se creará la subimagen resultante 
+.br
+\fIfils_sub\fP Tamaño vertical de la imagen resultado 
+.br
+\fIcols_sub\fP Tamaño horizontal de la imagen resultado 
+.RE
+.PP
+\fBPrecondición\fP
+.RS 4
+(fil + filas_sub) < fich_orig\&.NumFilas() && (col + filas_col) < fich_orig\&.NumColumnas() 
+.RE
+.PP
+\fBPostcondición\fP
+.RS 4
+El contenido de la imagen se ve reescrito por el de la subimagen indicada de otra\&. 
+.RE
+.PP
+
+.PP
+Hace referencia a \fBGetValor()\fP y \fBSetValor()\fP\&.
+.PP
+Referenciado por \fBHacerZoom()\fP\&.
+.SS "byte Imagen::GetValor (int fil, int col) const"
+
+.PP
+Consulta el valor de un píxel de la imagen\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIfil\fP Índice de la fila del píxel cuyo valor se quiere consultar 
+.br
+\fIcol\fP índice de la columna del píxel cuyo valor se quiere consultar 
+.RE
+.PP
+\fBPrecondición\fP
+.RS 4
+0 <= fil < \fBNumFilas()\fP && 0 <= col < \fBNumColumnas()\fP 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+Valor de luminosidad del píxel especificado 
+.RE
+.PP
+
+.PP
+Referenciado por \fBExtraerSubimagen()\fP\&.
+.SS "void Imagen::HacerZoom (const \fBImagen\fP & otra, const int fil, const int col, const int fils_sub, const int cols_sub)"
+
+.PP
+Hace zoom a una imagen, esto es: 
+.IP "\(bu" 2
+Extrae de ella una subimagen\&.
+.IP "\(bu" 2
+Aplica a la subimagen una interpolacion consistente en añadir filas (y columnas) en las que el valor de cada píxel será una media de los valores de los píxeles que tenga arriba y abajo (a izquierda y derecha, respectivamente)
+.PP
+.PP
+\fBParámetros\fP
+.RS 4
+\fIfich_orig\fP Nombre del fichero que contiene la imagen original 
+.br
+\fIfich_rdo\fP Nombre del fichero que contendrá el resultado 
+.br
+\fIfil\fP Fila a partir de la cual se creará la subimagen resultante 
+.br
+\fIcol\fP Columna a partir de la cual se creará la subimagen resultante 
+.br
+\fIfils_sub\fP Tamaño vertical de la imagen resultado 
+.br
+\fIcols_sub\fP Tamaño horizontal de la imagen resultado 
+.RE
+.PP
+\fBPrecondición\fP
+.RS 4
+(fil + filas_sub) < fich_orig\&.NumFilas() && (col + filas_col) < fich_orig\&.NumColumnas() 
+.RE
+.PP
+
+.PP
+Hace referencia a \fBExtraerSubimagen()\fP y \fBInterpolar()\fP\&.
+.SS "void Imagen::InsertarColumna (int pos)"
+
+.PP
+Inserta una columna de píxeles vacíos en la posición indicada\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIpos\fP Índice en el que se insertará la columna de píxeles 
+.RE
+.PP
+
+.PP
+Hace referencia a \fBEcualizarColumna()\fP\&.
+.PP
+Referenciado por \fBInterpolar()\fP\&.
+.SS "void Imagen::InsertarFila (int pos)"
+
+.PP
+Inserta una fila de píxeles vacíos en la posición indicada\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIpos\fP Índice en el que se insertará la fila de píxeles 
+.RE
+.PP
+
+.PP
+Hace referencia a \fBEcualizarFila()\fP\&.
+.PP
+Referenciado por \fBInterpolar()\fP\&.
+.SS "void Imagen::LeerImagenPGM (const string nombre)"
+
+.PP
+Lee una imagen PGM\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fInombre\fP Nombre del archivo de entrada 
+.RE
+.PP
+
+.SS "int Imagen::NumColumnas () const"
+
+.PP
+Devuelve el número de columnas de la imagen\&. 
+.PP
+\fBDevuelve\fP
+.RS 4
+Número de columnas de la imagen 
+.RE
+.PP
+
+.SS "int Imagen::NumFilas () const"
+
+.PP
+Devuelve el número de filas de la imagen\&. 
+.PP
+\fBDevuelve\fP
+.RS 4
+Número de filas de la imagen 
+.RE
+.PP
+
+.SS "\fBImagen\fP & Imagen::operator= (const \fBImagen\fP & otra)"
+
+.PP
+Operador = de la clase imagen, que copia los datos de otra\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIotra\fP \fBImagen\fP que se quiere copiar 
+.RE
+.PP
+\fBDevuelve\fP
+.RS 4
+Referencia a un objeto \fBImagen\fP 
+.RE
+.PP
+
+.SS "void Imagen::SetValor (int fil, int col, byte valor)"
+
+.PP
+Modifica el valor de un píxel de la imagen\&. 
+.PP
+\fBParámetros\fP
+.RS 4
+\fIfil\fP Índice de la fila del píxel cuyo valor se quiere modificar 
+.br
+\fIcol\fP Índice de la columna del píxel cuyo valor se quiere modificar 
+.RE
+.PP
+\fBPrecondición\fP
+.RS 4
+0 <= fil < \fBNumFilas()\fP && 0 <= col < \fBNumColumnas()\fP && 0 <= valor <= 255 
+.RE
+.PP
+
+.PP
+Referenciado por \fBExtraerSubimagen()\fP\&.
+
+.SH "Autor"
+.PP 
+Generado automáticamente por Doxygen para tdaImagen del código fuente\&.
